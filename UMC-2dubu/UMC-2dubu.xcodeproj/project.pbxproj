@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C666542B2BC4DA49008A9CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666542A2BC4DA49008A9CC6 /* AppDelegate.swift */; };
 		C666542D2BC4DA49008A9CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666542C2BC4DA49008A9CC6 /* SceneDelegate.swift */; };
-		C666542F2BC4DA49008A9CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666542E2BC4DA49008A9CC6 /* ViewController.swift */; };
+		C666542F2BC4DA49008A9CC6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C666542E2BC4DA49008A9CC6 /* MainViewController.swift */; };
 		C66654322BC4DA49008A9CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C66654312BC4DA49008A9CC6 /* Base */; };
 		C66654342BC4DA4B008A9CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66654332BC4DA4B008A9CC6 /* Assets.xcassets */; };
 		C66654372BC4DA4B008A9CC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C66654362BC4DA4B008A9CC6 /* Base */; };
@@ -19,7 +19,7 @@
 		C66654272BC4DA49008A9CC6 /* UMC-2dubu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-2dubu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C666542A2BC4DA49008A9CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C666542C2BC4DA49008A9CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C666542E2BC4DA49008A9CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C666542E2BC4DA49008A9CC6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C66654312BC4DA49008A9CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C66654332BC4DA4B008A9CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C66654362BC4DA4B008A9CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,13 +58,45 @@
 			children = (
 				C666542A2BC4DA49008A9CC6 /* AppDelegate.swift */,
 				C666542C2BC4DA49008A9CC6 /* SceneDelegate.swift */,
-				C666542E2BC4DA49008A9CC6 /* ViewController.swift */,
-				C66654302BC4DA49008A9CC6 /* Main.storyboard */,
+				C66654422BC52471008A9CC6 /* Helpers */,
+				C66654412BC52450008A9CC6 /* ViewModel */,
+				C666543F2BC523FE008A9CC6 /* View */,
 				C66654332BC4DA4B008A9CC6 /* Assets.xcassets */,
-				C66654352BC4DA4B008A9CC6 /* LaunchScreen.storyboard */,
 				C66654382BC4DA4B008A9CC6 /* Info.plist */,
 			);
 			path = "UMC-2dubu";
+			sourceTree = "<group>";
+		};
+		C666543F2BC523FE008A9CC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C66654352BC4DA4B008A9CC6 /* LaunchScreen.storyboard */,
+				C66654402BC5242B008A9CC6 /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C66654402BC5242B008A9CC6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C66654302BC4DA49008A9CC6 /* Main.storyboard */,
+				C666542E2BC4DA49008A9CC6 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C66654412BC52450008A9CC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C66654422BC52471008A9CC6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C666542F2BC4DA49008A9CC6 /* ViewController.swift in Sources */,
+				C666542F2BC4DA49008A9CC6 /* MainViewController.swift in Sources */,
 				C666542B2BC4DA49008A9CC6 /* AppDelegate.swift in Sources */,
 				C666542D2BC4DA49008A9CC6 /* SceneDelegate.swift in Sources */,
 			);
