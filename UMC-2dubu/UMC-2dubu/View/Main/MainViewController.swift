@@ -116,27 +116,9 @@ class MainViewController: UIViewController {
             )
         }
     }
-    @IBOutlet weak var middleContainerView1: UIView! {
-        didSet {
-            middleContainerView1.layer.shadowColor = UIColor.lightGray.cgColor
-            middleContainerView1.layer.shadowOpacity = 0.5
-            middleContainerView1.layer.shadowRadius = 5
-        }
-    }
-    @IBOutlet weak var middleContainerView2: UIView! {
-        didSet {
-            middleContainerView2.layer.shadowColor = UIColor.lightGray.cgColor
-            middleContainerView2.layer.shadowOpacity = 0.5
-            middleContainerView2.layer.shadowRadius = 5
-        }
-    }
-    @IBOutlet weak var middleContainerView3: UIView! {
-        didSet {
-            middleContainerView3.layer.shadowColor = UIColor.lightGray.cgColor
-            middleContainerView3.layer.shadowOpacity = 0.5
-            middleContainerView3.layer.shadowRadius = 5
-        }
-    }
+    @IBOutlet weak var middleContainerView1: UIView!
+    @IBOutlet weak var middleContainerView2: UIView!
+    @IBOutlet weak var middleContainerView3: UIView!
     
     // Tab bar
     @IBOutlet weak var tabBarContainerView: UIView! {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -88,6 +88,7 @@
                                     <constraint firstAttribute="bottom" secondItem="tiS-CN-zAT" secondAttribute="bottom" constant="15" id="HDw-lJ-1hF"/>
                                     <constraint firstItem="xz6-Kp-cdQ" firstAttribute="top" secondItem="8FR-I5-ikb" secondAttribute="top" constant="15" id="TA8-7d-R9c"/>
                                     <constraint firstAttribute="trailing" secondItem="tiS-CN-zAT" secondAttribute="trailing" constant="15" id="WdL-nV-5WE"/>
+                                    <constraint firstItem="tiS-CN-zAT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zh4-rV-9m6" secondAttribute="trailing" constant="20" id="YaN-o2-Bhu"/>
                                     <constraint firstItem="Zh4-rV-9m6" firstAttribute="centerY" secondItem="MAw-pb-GM8" secondAttribute="centerY" id="aVn-SJ-t02"/>
                                     <constraint firstItem="tiS-CN-zAT" firstAttribute="top" secondItem="xz6-Kp-cdQ" secondAttribute="bottom" constant="10" id="db2-tA-Vaq"/>
                                     <constraint firstItem="tiS-CN-zAT" firstAttribute="leading" secondItem="8FR-I5-ikb" secondAttribute="leading" constant="15" id="lDW-IT-h00"/>
@@ -121,15 +122,14 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0tN-nm-hYa">
-                                                <rect key="frame" x="20" y="100" width="353" height="110"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0tN-nm-hYa">
+                                                <rect key="frame" x="20" y="100" width="353" height="104.33333333333331"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-QB-h5s">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="104.33333333333333"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYT-O5-CBd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yYT-O5-CBd">
+                                                                <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="104.33333333333333"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="10"/>
@@ -140,14 +140,17 @@
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Tlh-QB-h5s" secondAttribute="height" multiplier="1:1" id="DsG-36-6WH"/>
+                                                            <constraint firstAttribute="bottom" secondItem="yYT-O5-CBd" secondAttribute="bottom" id="EMd-jc-73T"/>
+                                                            <constraint firstItem="yYT-O5-CBd" firstAttribute="top" secondItem="Tlh-QB-h5s" secondAttribute="top" id="FLS-Px-Vyc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="yYT-O5-CBd" secondAttribute="trailing" id="ZQ9-t4-QEf"/>
+                                                            <constraint firstItem="yYT-O5-CBd" firstAttribute="leading" secondItem="Tlh-QB-h5s" secondAttribute="leading" id="ssw-qY-Jlg"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRD-eW-RT3">
-                                                        <rect key="frame" x="121.66666666666666" y="0.0" width="110" height="110"/>
+                                                        <rect key="frame" x="124.33333333333334" y="0.0" width="104.33333333333334" height="104.33333333333333"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4N7-iJ-kBz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4N7-iJ-kBz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="104.33333333333333"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="10"/>
@@ -156,13 +159,19 @@
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="4N7-iJ-kBz" firstAttribute="top" secondItem="gRD-eW-RT3" secondAttribute="top" id="1Hu-6s-PJ4"/>
+                                                            <constraint firstAttribute="width" secondItem="gRD-eW-RT3" secondAttribute="height" multiplier="1:1" id="Eee-sh-zRP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="4N7-iJ-kBz" secondAttribute="trailing" id="c4P-eZ-ZFN"/>
+                                                            <constraint firstItem="4N7-iJ-kBz" firstAttribute="leading" secondItem="gRD-eW-RT3" secondAttribute="leading" id="tPa-AJ-MhP"/>
+                                                            <constraint firstAttribute="bottom" secondItem="4N7-iJ-kBz" secondAttribute="bottom" id="w8C-kC-934"/>
+                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2l-hQ-SIY">
-                                                        <rect key="frame" x="243" y="0.0" width="110" height="110"/>
+                                                        <rect key="frame" x="248.66666666666671" y="0.0" width="104.33333333333334" height="104.33333333333333"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPB-5E-r7r">
-                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RPB-5E-r7r">
+                                                                <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="104.33333333333333"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="10"/>
@@ -171,13 +180,15 @@
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="RPB-5E-r7r" firstAttribute="top" secondItem="M2l-hQ-SIY" secondAttribute="top" id="C4r-ub-GrM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="RPB-5E-r7r" secondAttribute="bottom" id="ETL-ue-jVv"/>
+                                                            <constraint firstItem="RPB-5E-r7r" firstAttribute="leading" secondItem="M2l-hQ-SIY" secondAttribute="leading" id="Yea-hf-F6Y"/>
+                                                            <constraint firstAttribute="width" secondItem="M2l-hQ-SIY" secondAttribute="height" multiplier="1:1" id="edn-Jn-F9X"/>
+                                                            <constraint firstAttribute="trailing" secondItem="RPB-5E-r7r" secondAttribute="trailing" id="znh-TU-jrT"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="M2l-hQ-SIY" firstAttribute="width" secondItem="M2l-hQ-SIY" secondAttribute="height" multiplier="1:1" id="8MO-vq-ujH"/>
-                                                    <constraint firstAttribute="height" constant="110" id="LHf-yt-z12"/>
-                                                    <constraint firstItem="gRD-eW-RT3" firstAttribute="width" secondItem="gRD-eW-RT3" secondAttribute="height" multiplier="1:1" id="hm9-Ly-wVf"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
