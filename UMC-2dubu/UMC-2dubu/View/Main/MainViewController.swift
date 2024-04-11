@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var currentLocationLabel: UILabel! {
         didSet {
             currentLocationLabel.textColor = .white
-            currentLocationLabel.font = .systemFont(ofSize: 22, weight: .bold)
+            currentLocationLabel.font = .systemFont(ofSize: 20, weight: .bold)
         }
     }
     @IBOutlet weak var navigationItem1: UIImageView! {
@@ -63,6 +63,21 @@ class MainViewController: UIViewController {
             searchButton.layer.shadowColor = UIColor.gray.cgColor
             searchButton.layer.shadowOpacity = 1.0
             searchButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        }
+    }
+    
+    @IBOutlet weak var tabBarContainerView: UIView! {
+        didSet {
+            tabBarContainerView.layer.shadowColor = UIColor.gray.cgColor
+            tabBarContainerView.layer.cornerRadius = 20
+            tabBarContainerView.layer.shadowOpacity = 0.5
+            tabBarContainerView.layer.shadowOffset = CGSize(width: 0, height: -1)
+        }
+    }
+    @IBOutlet weak var tabBarView: UIView! {
+        didSet {
+            tabBarView.backgroundColor = .white
+            tabBarView.roundCorners(cornerRadius: 20, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
         }
     }
     
