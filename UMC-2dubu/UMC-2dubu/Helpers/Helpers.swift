@@ -23,3 +23,22 @@ extension UIView {
         layer.maskedCorners = CACornerMask(arrayLiteral: maskedCorners)
     }
 }
+
+extension UIImageView {
+    func applyshadowWithCorner(
+        containerView: UIView,
+        cornerRadius: CGFloat,
+        shadowOpacity: Float,
+        shadowRadius: CGFloat
+    ) {
+        containerView.clipsToBounds = false
+        containerView.layer.shadowColor = UIColor.lightGray.cgColor
+        containerView.layer.shadowOpacity = shadowOpacity
+        containerView.layer.shadowOffset = .zero
+        containerView.layer.shadowRadius = shadowRadius
+        containerView.layer.cornerRadius = cornerRadius
+        containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: cornerRadius).cgPath
+        self.clipsToBounds = true
+        self.layer.cornerRadius = cornerRadius
+    }
+}

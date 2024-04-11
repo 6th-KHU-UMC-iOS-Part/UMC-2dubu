@@ -66,6 +66,79 @@ class MainViewController: UIViewController {
         }
     }
     
+    // Main Scroll Area
+    @IBOutlet weak var mainScrollView: UIScrollView!
+    @IBOutlet weak var scrollContainerView: UIView! {
+        didSet {
+            scrollContainerView.backgroundColor = .white
+        }
+    }
+    @IBOutlet weak var eventBanner: UIImageView! {
+        didSet {
+            eventBanner.image = UIImage(named: "event")?.withAlignmentRectInsets(UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0))
+            eventBanner.layer.cornerRadius = 10
+            eventBanner.layer.borderWidth = 1
+            eventBanner.layer.borderColor = UIColor.mainColor.cgColor
+        }
+    }
+    @IBOutlet weak var middleImageView1: UIImageView! {
+        didSet {
+            middleImageView1.image = UIImage(named: "middle_1")
+            middleImageView1.applyshadowWithCorner(
+                containerView: middleContainerView1,
+                cornerRadius: 10,
+                shadowOpacity: 0.5,
+                shadowRadius: 5
+            )
+        }
+    }
+    @IBOutlet weak var middleImageView2: UIImageView! {
+        didSet {
+            middleImageView2.image = UIImage(named: "middle_2")
+            middleImageView2.layer.cornerRadius = 10
+            middleImageView2.applyshadowWithCorner(
+                containerView: middleContainerView2,
+                cornerRadius: 10,
+                shadowOpacity: 0.5,
+                shadowRadius: 5
+            )
+        }
+    }
+    @IBOutlet weak var middleImageView3: UIImageView! {
+        didSet {
+            middleImageView3.image = UIImage(named: "middle_3")
+            middleImageView3.layer.cornerRadius = 10
+            middleImageView3.applyshadowWithCorner(
+                containerView: middleContainerView3,
+                cornerRadius: 10,
+                shadowOpacity: 0.5,
+                shadowRadius: 5
+            )
+        }
+    }
+    @IBOutlet weak var middleContainerView1: UIView! {
+        didSet {
+            middleContainerView1.layer.shadowColor = UIColor.lightGray.cgColor
+            middleContainerView1.layer.shadowOpacity = 0.5
+            middleContainerView1.layer.shadowRadius = 5
+        }
+    }
+    @IBOutlet weak var middleContainerView2: UIView! {
+        didSet {
+            middleContainerView2.layer.shadowColor = UIColor.lightGray.cgColor
+            middleContainerView2.layer.shadowOpacity = 0.5
+            middleContainerView2.layer.shadowRadius = 5
+        }
+    }
+    @IBOutlet weak var middleContainerView3: UIView! {
+        didSet {
+            middleContainerView3.layer.shadowColor = UIColor.lightGray.cgColor
+            middleContainerView3.layer.shadowOpacity = 0.5
+            middleContainerView3.layer.shadowRadius = 5
+        }
+    }
+    
+    // Tab bar
     @IBOutlet weak var tabBarContainerView: UIView! {
         didSet {
             tabBarContainerView.layer.shadowColor = UIColor.gray.cgColor
