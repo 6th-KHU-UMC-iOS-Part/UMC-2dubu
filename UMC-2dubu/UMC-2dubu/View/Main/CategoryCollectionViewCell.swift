@@ -8,10 +8,8 @@
 import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
+    static let filename = "CategoryCell"
+    static let reuseIdentifier = "CategoryCell"
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+    @IBOutlet weak var categoryimageView: UIImageView!
 }

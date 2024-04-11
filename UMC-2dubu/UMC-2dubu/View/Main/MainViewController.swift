@@ -81,6 +81,9 @@ class MainViewController: UIViewController {
             eventBanner.layer.borderColor = UIColor.mainColor.cgColor
         }
     }
+    @IBOutlet weak var middleContainerView1: UIView!
+    @IBOutlet weak var middleContainerView2: UIView!
+    @IBOutlet weak var middleContainerView3: UIView!
     @IBOutlet weak var middleImageView1: UIImageView! {
         didSet {
             middleImageView1.image = UIImage(named: "middle_1")
@@ -116,9 +119,24 @@ class MainViewController: UIViewController {
             )
         }
     }
-    @IBOutlet weak var middleContainerView1: UIView!
-    @IBOutlet weak var middleContainerView2: UIView!
-    @IBOutlet weak var middleContainerView3: UIView!
+    
+    @IBOutlet weak var categoryContentView: UIView! {
+        didSet {
+            categoryContentView.layer.cornerRadius = 20
+            categoryContentView.layer.shadowOpacity = 0.5
+            categoryContentView.layer.shadowColor = UIColor.lightGray.cgColor
+            categoryContentView.layer.shadowOffset = .zero
+            categoryContentView.layer.shadowRadius = 5
+            categoryContentView.layer.masksToBounds = false
+        }
+    }
+    @IBOutlet weak var categoryTitleImage: UIImageView! {
+        didSet {
+            categoryTitleImage.image = UIImage(named: "category_title")
+            categoryTitleImage.contentMode = .scaleAspectFill
+        }
+    }
+    @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     // Tab bar
     @IBOutlet weak var tabBarContainerView: UIView! {
@@ -137,19 +155,72 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - Variables
+    private let categoryCellImageData = [
+        "menuCategory_01",
+        "menuCategory_02",
+        "menuCategory_03",
+        "menuCategory_04",
+        "menuCategory_05",
+        "menuCategory_06",
+        "menuCategory_07",
+        "menuCategory_08",
+        "menuCategory_09",
+        "menuCategory_10"
+    ]
     
     // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initViews()
+        registerXib()
+        
+        categoryCollectionView.dataSource = self
+        categoryCollectionView.delegate = self
     }
 
     // MARK: - IBActions
     
     // MARK: - Functinos
-    func initViews() {
-        
+    private func registerXib() {
+        categoryCollectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier)
     }
 }
 
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categoryCellImageData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
+        cell.categoryimageView?.image = UIImage(named: categoryCellImageData[indexPath.row])
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 1
+        
+        return cell
+    }
+}
+
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let size = CGSize(width: collectionView.frame.width / 5, height: 145 / 2)
+        return size
+        
+        /*
+        // banner
+        else {
+            // return CGSize(width: bannerCollectionView.frame.size.width, height:  bannerCollectionView.frame.height)
+        }
+         */
+    }
+}
